@@ -1,0 +1,113 @@
+.wrapper {
+  min-height: 80vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.card {
+  width: 50%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  height: 100%;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #374151;
+  text-align: center;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.details h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.price {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.actions input {
+  width: 50px;
+  padding: 6px;
+  padding-left: 15px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  text-align: center;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  color: #dc2626;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 24px;
+  color: #5b5d61;
+}
+
+.checkoutBtn {
+  margin-top: 16px;
+  display: block;
+  text-align: center;
+  padding: 14px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.empty {
+  text-align: center;
+  color: #6b7280;
+}
+
+.shopBtn {
+  display: block;
+  margin: 20px auto 0;
+  width: fit-content;
+  padding: 12px 24px;
+  border-radius: 10px;
+  background: #6366f1;
+  color: #fff;
+  text-decoration: none;
+}

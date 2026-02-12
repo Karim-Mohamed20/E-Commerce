@@ -1,0 +1,109 @@
+.wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 40px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 1100px;
+  background: #ffffff;
+  padding: 32px;
+  padding-bottom: 38px;
+  padding-top: 10px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #374151;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.stat {
+  background: #f9fafb;
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+}
+
+.stat h2 {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.stat p {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.section {
+  margin-top: 40px;
+}
+
+.sectionTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #374151;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #6b7280;
+}
+
+.table th {
+  background: #f9fafb;
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.empty {
+  color: #6b7280;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
