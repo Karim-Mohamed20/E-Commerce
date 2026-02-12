@@ -40,7 +40,7 @@ This project focuses on frontend architecture, state management, and API integra
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/Karim-Mohamed20/E-Commerce.git
 cd your-repo-name
 npm install
 npm run dev
