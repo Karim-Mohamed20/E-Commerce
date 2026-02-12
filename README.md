@@ -44,6 +44,7 @@ git clone https://github.com/Karim-Mohamed20/E-Commerce.git
 cd your-repo-name
 npm install
 npm run dev
+```
 
 ## 📸 Screenshots
 
