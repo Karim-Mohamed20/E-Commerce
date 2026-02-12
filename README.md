@@ -44,3 +44,35 @@ git clone https://github.com/Karim-Mohamed20/E-Commerce.git
 cd your-repo-name
 npm install
 npm run dev
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+![Home](./screenshots/Home.png)
+
+### 🛍 Product Details Page
+![ProductDetails](./screenshots/CartDetails.png)
+
+### 🛒 Cart Page
+![Cart](./screenshots/Cart.png)
+
+### 🛒 Checkout Page
+![Checkout](./screenshots/Checkout.png)
+
+### 📦 Orders Page
+![Orders](./screenshots/Orders.png)
+
+### 🛠 Admin Dashboard Page
+![Admin](./screenshots/AdminDashboard.png)
+
+### 📦 Manage Orders Page
+![ManageOrders](./screenshots/ManageOrders.png)
+
+### 🛍 Manage Products Page
+![ManageProducts](./screenshots/ManageProducts.png)
+
+### 🔐 Register Page
+![Register](./screenshots/Register.png)
+
+### 🔐 Login Page
+![Login](./screenshots/Login.png)
