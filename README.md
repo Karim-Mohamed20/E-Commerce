@@ -1,7 +1,9 @@
 # 🛒 React E-Commerce Frontend
 
-A modern and scalable e-commerce frontend application built with React.js.  
-This project focuses on frontend architecture, state management, and API integration using mock REST APIs.
+A modern e-commerce frontend built with React, Redux Toolkit, and React Query.  
+Implements authentication with role-based access (User/Admin), protected routes,
+cart management with persistence, dynamic product pages, and a scalable feature-based architecture.
+
 
 ---
 
