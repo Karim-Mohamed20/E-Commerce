@@ -51,31 +51,31 @@ npm run dev
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Home](./screenshots/Home.png)
+![Home](./public/screenshots/Home.png)
 
 ### 🛍 Product Details Page
-![ProductDetails](./screenshots/CartDetails.png)
+![ProductDetails](./public/screenshots/CartDetails.png)
 
 ### 🛒 Cart Page
-![Cart](./screenshots/Cart.png)
+![Cart](./public/screenshots/Cart.png)
 
 ### 🛒 Checkout Page
-![Checkout](./screenshots/Checkout.png)
+![Checkout](./public/screenshots/Checkout.png)
 
 ### 📦 Orders Page
-![Orders](./screenshots/Orders.png)
+![Orders](./public/screenshots/Orders.png)
 
 ### 🛠 Admin Dashboard Page
-![Admin](./screenshots/AdminDashboard.png)
+![Admin](./public/screenshots/AdminDashboard.png)
 
 ### 📦 Manage Orders Page
-![ManageOrders](./screenshots/ManageOrders.png)
+![ManageOrders](./public/screenshots/ManageOrders.png)
 
 ### 🛍 Manage Products Page
-![ManageProducts](./screenshots/ManageProducts.png)
+![ManageProducts](./public/screenshots/ManageProducts.png)
 
 ### 🔐 Register Page
-![Register](./screenshots/Register.png)
+![Register](./public/screenshots/Register.png)
 
 ### 🔐 Login Page
-![Login](./screenshots/Login.png)
+![Login](./public/screenshots/Login.png)
