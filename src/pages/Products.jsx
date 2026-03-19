@@ -41,50 +41,84 @@ const Products = () => {
     enabled: !!category,
   });
 
+  // Default to men's shirts when viewing "all categories"
+  const menShirtsQuery = useQuery({
+    queryKey: ["category", "mens-shirts"],
+    queryFn: () =>
+      fetch(`https://dummyjson.com/products/category/mens-shirts`).then((res) =>
+        res.json(),
+      ),
+    enabled: !search && !category,
+  });
+
   const isLoading =
   productsQuery.isLoading ||
   searchQuery.isLoading ||
-  categoryQuery.isLoading;
+  categoryQuery.isLoading ||
+  menShirtsQuery.isLoading;
 
-  const products = search
+  let products = search
     ? searchQuery.data?.products
     : category
       ? categoryQuery.data?.products
-      : productsQuery.data?.products;
+      : menShirtsQuery.data?.products;
 
   const hasNoResults =
     products && products.length === 0 && (search || category);
 
+  // Sort categories - Men's items first
+  const sortedCategories = (categoriesQuery.data || []).sort((a, b) => {
+    const aMens = a.slug.includes("mens") ? 0 : 1;
+    const bMens = b.slug.includes("mens") ? 0 : 1;
+    return aMens - bMens;
+  });
+
   return (
     <div className={styles.wrapper}>
-      <h1 className={styles.title}>Products</h1>
+      <div className={styles.searchSection}>
+        <h1 className={styles.title}>Products</h1>
+        <div className={styles.searchBox}>
+          <svg className={styles.searchIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+          <input
+            placeholder="Search products..."
+            className={styles.input}
+            value={search}
+            onChange={(e) => {
+              setSearch(e.target.value);
+              setCategory("");
+            }}
+          />
+        </div>
+      </div>
 
-      <div className={styles.filters}>
-        <input
-          placeholder="Search products..."
-          className={styles.input}
-          value={search}
-          onChange={(e) => {
-            setSearch(e.target.value);
-            setCategory("");
-          }}
-        />
-
-        <select
-          className={styles.select}
-          value={category}
-          onChange={(e) => {
-            setCategory(e.target.value);
-            setSearch("");
-          }}
-        >
-          <option value="">All Categories</option>
-          {categoriesQuery.data?.map((cat) => (
-            <option key={cat.slug} value={cat.slug}>
+      <div className={styles.categoriesSection}>
+        <h2 className={styles.categoriesTitle}>Shop by Category</h2>
+        <div className={styles.categoriesList}>
+          <button
+            className={`${styles.categoryBtn} ${category === "" ? styles.categoryActive : ""}`}
+            onClick={() => {
+              setCategory("");
+              setSearch("");
+            }}
+          >
+            All Categories
+          </button>
+          {sortedCategories?.map((cat) => (
+            <button
+              key={cat.slug}
+              className={`${styles.categoryBtn} ${category === cat.slug ? styles.categoryActive : ""}`}
+              onClick={() => {
+                setCategory(cat.slug);
+                setSearch("");
+              }}
+            >
               {cat.name}
-            </option>
+            </button>
           ))}
-        </select>
+        </div>
       </div>
 
       <div className={styles.grid}>

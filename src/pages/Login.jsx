@@ -50,6 +50,7 @@ const Login = () => {
     <div className={styles.wrapper}>
       <div className={styles.card}>
         <h1 className={styles.title}>Login</h1>
+        <p className={styles.subtitle}>Welcome back! Sign in to your account</p>
 
         <form className={styles.form} onSubmit={handleSubmit}>
           <input

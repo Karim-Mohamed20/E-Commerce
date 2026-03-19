@@ -3,11 +3,13 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchProductById } from "../services/productsApi";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../features/cart/cartSlice";
+import { useState } from "react";
 import styles from "./ProductDetails.module.css";
 
 const ProductDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
+  const [quantity, setQuantity] = useState(1);
 
   const { data, isLoading, isError } = useQuery({
     queryKey: ["product", id],
@@ -31,7 +33,11 @@ const ProductDetails = () => {
   }
 
   const handleAddToCart = () => {
-    dispatch(addToCart({ ...data, quantity: 1 }));
+    console.log("✅ Add to Cart clicked!");
+    console.log("Product ID:", data.id);
+    console.log("Quantity:", quantity);
+    dispatch(addToCart({ ...data, quantity: parseInt(quantity) }));
+    setQuantity(1);
   };
 
   return (
@@ -53,8 +59,16 @@ const ProductDetails = () => {
             <p className={styles.price}>${data.price}</p>
 
             <div className={styles.actions}>
-
-              <button onClick={handleAddToCart}>
+              <input
+                type="number"
+                min="1"
+                value={quantity}
+                onChange={(e) => setQuantity(e.target.value)}
+              />
+              <button 
+                type="button"
+                onClick={handleAddToCart}
+              >
                 Add to Cart
               </button>
             </div>

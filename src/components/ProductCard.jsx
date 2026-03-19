@@ -6,6 +6,12 @@ import styles from "./ProductCard.module.css";
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
 
+  const handleAddToCart = () => {
+    console.log("✅ Add to Cart clicked from ProductCard!");
+    console.log("Product:", product.title);
+    dispatch(addToCart({ ...product, quantity: 1 }));
+  };
+
   return (
     <div className={styles.card}>
       <Link to={`/products/${product.id}`} className={styles.link}>
@@ -21,8 +27,9 @@ const ProductCard = ({ product }) => {
       <p className={styles.price}>${product.price}</p>
 
       <button
+        type="button"
         className={styles.cartBtn}
-        onClick={() => dispatch(addToCart(product))}
+        onClick={handleAddToCart}
       >
         Add to Cart
       </button>

@@ -60,6 +60,7 @@ const Register = () => {
     <div className={styles.wrapper}>
       <div className={styles.card}>
         <h1 className={styles.title}>Create Account</h1>
+        <p className={styles.subtitle}>Join our community and start shopping</p>
 
 
         <form className={styles.form} onSubmit={handleSubmit}>

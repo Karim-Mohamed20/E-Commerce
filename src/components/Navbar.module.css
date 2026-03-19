@@ -1,7 +1,7 @@
 .navbar {
   background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 50;
@@ -10,82 +10,177 @@
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 16px 24px;
+  padding: 18px 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 40px;
 }
 
 .logo {
-  font-size: 22px;
-  font-weight: 800;
-  color: #4f46e5;
+  font-size: 28px;
+  font-weight: 900;
+  color: #6b7280;
   text-decoration: none;
+  letter-spacing: -1px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.logo::before {
+  content: '';
+  display: none;
+}
+
+.logo:hover {
+  color: #111827;
 }
 
 .links {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 28px;
+  flex-wrap: wrap;
 }
 
 .link {
   text-decoration: none;
   font-size: 15px;
-  font-weight: 500;
-  color: #374151;
+  font-weight: 700;
+  color: #6b7280;
   position: relative;
+  transition: color 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -6px;
+  left: 0;
+  background: #9ca3af;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
 }
 
 .link:hover {
-  color: #4f46e5;
+  color: #6b7280;
+}
+
+.link:hover::after {
+  width: 100%;
 }
 
 .badge {
-  background: #4f46e5;
+  background: #475569;
   color: #ffffff;
   font-size: 12px;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 999px;
-  margin-left: 6px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-left: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  box-shadow: none;
+  letter-spacing: 0.3px;
 }
 
 .primaryBtn {
-  padding: 6px 14px;
+  padding: 12px 24px;
   border-radius: 10px;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background: #475569;
   color: #ffffff;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 800;
   text-decoration: none;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.3px;
+  box-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.primaryBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transition: left 0.5s ease;
 }
 
 .primaryBtn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+  background: #3f4554;
+  box-shadow: none;
+}
+
+.primaryBtn:hover::before {
+  left: 100%;
 }
 
 .adminLink {
-  padding: 6px 12px;
-  border-radius: 8px;
-  background: #6366f1;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: #475569;
   color: #ffffff;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 800;
   text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.3px;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.adminLink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transition: left 0.5s ease;
+}
+
+.adminLink:hover {
+  background: #3f4554;
+  box-shadow: none;
+}
+
+.adminLink:hover::before {
+  left: 100%;
 }
 
 .logoutBtn {
   background: none;
   border: none;
   font-size: 14px;
-  font-weight: 600;
-  color: #ef4444;
+  font-weight: 800;
+  color: #6b7280;
   cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  position: relative;
 }
 
 .logoutBtn:hover {
-  text-decoration: underline;
+  color: #ffffff;
+  background: #475569;
+  box-shadow: none;
 }

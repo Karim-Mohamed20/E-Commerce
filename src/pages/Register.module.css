@@ -3,44 +3,92 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-    135deg,
-    #667eea,
-    #764ba2
-  );
+  background: #f8f8f8;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper::before {
+  content: '';
+  display: none;
+}
+
+.wrapper::after {
+  content: '';
+  display: none;
 }
 
 .card {
   width: 100%;
-  max-width: 420px;
+  max-width: 400px;
   background: #ffffff;
-  padding: 32px;
-  border-radius: 14px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  padding: 48px 32px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  animation: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  display: none;
+}
+
+.card:hover::before {
+  display: none;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .title {
-  font-size: 32px;
-  font-weight: 700;
-  color: #1f2937;
-  margin-bottom: 50px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
   text-align: center;
   margin-top: 0;
+  letter-spacing: -0.3px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #6b7280;
+  text-align: center;
+  margin-bottom: 32px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
 .input {
-  padding: 12px 14px;
-  border-radius: 10px;
-  border: 1px solid #d1d5db;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
   background: #f9fafb;
   color: #111827;
-  font-size: 15px;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: 'Poppins', inherit;
+  transition: all 0.2s ease;
+  letter-spacing: 0.2px;
 }
 
 .input::placeholder {
@@ -49,57 +97,107 @@
 
 .input:focus {
   outline: none;
-  border-color: #6366f1;
+  border-color: #d1d5db;
   background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transform: none;
 }
 
 .registerBtn {
-  margin-top: 12px;
-  padding: 14px;
-  border-radius: 10px;
+  margin-top: 8px;
+  padding: 10px 14px;
+  border-radius: 6px;
   border: none;
-  background: linear-gradient(
-    135deg,
-    #6366f1,
-    #8b5cf6
-  );
+  background: #475569;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
+  font-family: 'Poppins', inherit;
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: all 0.2s ease;
+  box-shadow: none;
+  letter-spacing: 0.3px;
+  text-transform: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.registerBtn::before {
+  content: '';
+  display: none;
+}
+
+.registerBtn::after {
+  display: none;
 }
 
 .registerBtn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.35);
+  background: #3f4554;
+  transform: none;
+  box-shadow: none;
+}
+
+.registerBtn:hover::before {
+  display: none;
+}
+
+.registerBtn.disabledBtn {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 .backBtn {
-  margin-top: 18px;
+  margin-top: 20px;
   background: none;
   border: none;
-  color: #4f46e5;
-  font-size: 14px;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 400;
   cursor: pointer;
   text-align: center;
+  transition: all 0.2s ease;
+  font-family: 'Poppins', inherit;
+  letter-spacing: 0.2px;
+  position: relative;
+}
+
+.backBtn::after {
+  content: '';
+  display: none;
 }
 
 .backBtn:hover {
-  text-decoration: underline;
+  color: #111827;
+}
+
+.backBtn:hover::after {
+  display: none;
 }
 
 .error {
+  padding: 10px 12px;
   background: #fee2e2;
   color: #991b1b;
-  padding: 10px 12px;
-  border-radius: 8px;
-  font-size: 14px;
-  margin-bottom: 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #fecaca;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.2px;
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
 }
 
 .disabledBtn {
-  opacity: 0.6;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
