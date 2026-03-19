@@ -63,44 +63,62 @@ const AdminOrders = () => {
               </thead>
 
               <tbody>
-                {paginatedOrders.map((order) => (
-                  <tr key={order.id}>
-                    <td>{order.id}</td>
-                    <td>{order.user}</td>
-                    <td>
-                      ${order.total.toFixed(2)}
-                    </td>
-                    <td className={styles.status}>
-                      {order.status}
-                    </td>
-                    <td>
-                      <select
-                        value={order.status}
-                        onChange={(e) =>
-                          handleChange(
-                            order.id,
-                            e.target.value
-                          )
-                        }
-                        disabled={
-                          order.status ===
-                          "Cancelled"
-                        }
-                        className={styles.select}
-                      >
-                        <option value="Processing">
-                          Processing
-                        </option>
-                        <option value="Completed">
-                          Completed
-                        </option>
-                        <option value="Cancelled">
-                          Cancelled
-                        </option>
-                      </select>
-                    </td>
-                  </tr>
-                ))}
+                {paginatedOrders.map((order) => {
+                  const getStatusClass = (status) => {
+                    const baseClass = styles.status;
+                    switch (status.toLowerCase()) {
+                      case 'completed':
+                        return [baseClass, styles.completed].join(' ');
+                      case 'processing':
+                        return [baseClass, styles.processing].join(' ');
+                      case 'cancelled':
+                        return [baseClass, styles.cancelled].join(' ');
+                      default:
+                        return [baseClass, styles.pending].join(' ');
+                    }
+                  };
+                  
+                  return (
+                    <tr key={order.id}>
+                      <td>{order.id}</td>
+                      <td>{order.user}</td>
+                      <td>
+                        ${order.total.toFixed(2)}
+                      </td>
+                      <td>
+                        <span className={getStatusClass(order.status)}>
+                          {order.status}
+                        </span>
+                      </td>
+                      <td>
+                        <select
+                          value={order.status}
+                          onChange={(e) =>
+                            handleChange(
+                              order.id,
+                              e.target.value
+                            )
+                          }
+                          disabled={
+                            order.status ===
+                            "Cancelled"
+                          }
+                          className={styles.select}
+                        >
+                          <option value="Processing">
+                            Processing
+                          </option>
+                          <option value="Completed">
+                            Completed
+                          </option>
+                          <option value="Cancelled">
+                            Cancelled
+                          </option>
+                        </select>
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
 

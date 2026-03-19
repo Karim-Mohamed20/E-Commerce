@@ -71,7 +71,7 @@ const Footer = () => {
 
         <div className={styles.bottom}>
           <div className={styles.bottomLeft}>
-            <p>&copy; 2024 Premium Store. All rights reserved.</p>
+            <p>&copy; 2026 Premium Store. All rights reserved.</p>
           </div>
           <div className={styles.bottomCenter}>
             <ul className={styles.bottomLinks}>
