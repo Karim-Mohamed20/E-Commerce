@@ -4,6 +4,15 @@ A modern e-commerce frontend built with React, Redux Toolkit, and React Query.
 Implements authentication with role-based access (User/Admin), protected routes,
 cart management with persistence, dynamic product pages, and a scalable feature-based architecture.
 
+---
+
+## 📑 Table of Contents
+
+- [🚀 Live Features](#-live-features)
+- [🎥 Demo Video](#-demo-video)
+- [📸 Screenshots](#-screenshots)
+- [🏗 Built Using](#-built-using)
+- [⚙️ Installation](#️-installation)
 
 ---
 
@@ -14,39 +23,17 @@ cart management with persistence, dynamic product pages, and a scalable feature-
 - 🛠 Admin Dashboard
 - 🔒 Protected Routes
 - 🛍 Product Listing & Details
-- 🛒 Shopping Cart with Persistent Storage
+- 🛒 Shopping Cart & Checkout
 - 📦 Orders Page
 - 📱 Responsive UI
 
 ---
 
-## 🏗 Tech Stack
+### 🎥 Demo Video
 
-- **React.js**
-- **Redux Toolkit** (Global State Management)
-- **React Query** (Server-State Management & Caching)
-- **React Router**
-- **TailwindCSS**
-- **CSS Modules**
+[E-Commerce demo video](https://drive.google.com/drive/folders/18s1Alnm9poIJFrKd2v7PFusD0z193cMg?usp=sharing)
 
 ---
-
-## 🧠 Architecture Highlights
-
-- Feature-based folder structure
-- Separation of client-state and server-state
-- Role-based route protection
-- Persistent cart using localStorage
-- Reusable component design
-
-## ⚙️ Installation
-
-```bash
-git clone https://github.com/Karim-Mohamed20/E-Commerce.git
-cd your-repo-name
-npm install
-npm run dev
-```
 
 ## 📸 Screenshots
 
@@ -79,3 +66,25 @@ npm run dev
 
 ### 🔐 Login Page
 ![Login](./public/screenshots/Login.png)
+
+---
+
+## � Built Using
+
+- **React.js**
+- **Redux Toolkit** (Global State Management)
+- **React Query** (Server-State Management & Caching)
+- **React Router**
+- **TailwindCSS**
+- **CSS Modules**
+
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/Karim-Mohamed20/E-Commerce.git
+cd your-repo-name
+npm install
+npm run dev
+```
