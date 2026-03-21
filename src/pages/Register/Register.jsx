@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
-import { registerUser } from "../services/authApi";
+import { registerUser } from "../../services/authApi";
 import { useNavigate } from "react-router-dom";
 import styles from "./Register.module.css";
 

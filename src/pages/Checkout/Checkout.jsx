@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
-import { createOrder } from "../features/orders/ordersSlice";
-import { clearCart } from "../features/cart/cartSlice";
+import { createOrder } from "../../features/orders/ordersSlice";
+import { clearCart } from "../../features/cart/cartSlice";
 import { useNavigate } from "react-router-dom";
 import styles from "./Checkout.module.css";
 
@@ -9,6 +9,7 @@ const Checkout = () => {
   const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
 
   const total = items.reduce(
     (sum, item) => sum + item.price * item.quantity,

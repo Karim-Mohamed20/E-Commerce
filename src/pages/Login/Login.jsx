@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
-import { loginUser } from "../services/authApi";
+import { loginUser } from "../../services/authApi";
 import { useDispatch } from "react-redux";
-import { loginSuccess } from "../features/auth/authSlice";
+import { loginSuccess } from "../../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
 

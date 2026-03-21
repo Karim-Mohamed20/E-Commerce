@@ -1,17 +1,17 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Products from "./pages/Products";
-import ProductDetails from "./pages/ProductDetails";
-import Cart from "./pages/Cart";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import Products from "./pages/Products/Products";
+import ProductDetails from "./pages/ProductDetails/ProductDetails";
+import Cart from "./pages/Cart/Cart";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
 import ProtectedRoute from "./components/ProtectedRoute";
-import Checkout from "./pages/Checkout";
-import Orders from "./pages/Orders";
-import AdminDashboard from "./pages/admin/Dashboard";
-import AdminProducts from "./pages/admin/Products";
-import AdminOrders from "./pages/admin/Orders";
+import Checkout from "./pages/Checkout/Checkout";
+import Orders from "./pages/Orders/Orders";
+import AdminDashboard from "./pages/admin/Dashboard/Dashboard";
+import AdminProducts from "./pages/admin/Products/Products";
+import AdminOrders from "./pages/admin/Orders/Orders";
 
 const Layout = () => {
   const location = useLocation();

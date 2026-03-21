@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { fetchProductById } from "../services/productsApi";
+import { fetchProductById } from "../../services/productsApi";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../features/cart/cartSlice";
+import { addToCart } from "../../features/cart/cartSlice";
 import { useState } from "react";
 import styles from "./ProductDetails.module.css";
 

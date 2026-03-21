@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchProducts } from "../../services/productsApi";
+import { fetchProducts } from "../../../services/productsApi";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./AdminProducts.module.css";

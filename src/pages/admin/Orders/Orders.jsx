@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { updateOrderStatus } from "../../features/orders/ordersSlice";
+import { updateOrderStatus } from "../../../features/orders/ordersSlice";
 import styles from "./AdminOrders.module.css";
 
 const ITEMS_PER_PAGE = 6;

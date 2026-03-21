@@ -58,7 +58,7 @@ const Orders = () => {
             </div>
 
             <div className={styles.total}>
-              Total: ${order.total.toFixed(2)}
+              {order.total.toFixed(2)}
             </div>
           </div>
         ))}

@@ -4,8 +4,8 @@ import {
   fetchProducts,
   searchProducts,
   fetchCategories,
-} from "../services/productsApi";
-import ProductCard from "../components/ProductCard";
+} from "../../services/productsApi";
+import ProductCard from "../../components/ProductCard/ProductCard";
 import styles from "./Products.module.css";
 
 const Products = () => {

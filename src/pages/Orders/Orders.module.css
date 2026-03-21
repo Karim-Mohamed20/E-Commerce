@@ -157,9 +157,6 @@
 }
 
 .items {
-  border-top: 1px solid #f3f4f6;
-  padding-top: 20px;
-  margin-top: 20px;
   color: #6b7280;
 }
 
@@ -168,19 +165,19 @@
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
-  padding: 10px 0;
-  color: #111827;
+  padding: 8px 0;
+  color: #6b7280;
   font-weight: 500;
   transition: all 0.2s ease;
 }
 
-.item:first-child {
+/* .item:first-child {
   border-bottom: 1px solid #f3f4f6;
   padding-bottom: 12px;
   margin-bottom: 8px;
   color: #111827;
   font-weight: 600;
-}
+} */
 
 .item:hover {
   padding-left: 0;
